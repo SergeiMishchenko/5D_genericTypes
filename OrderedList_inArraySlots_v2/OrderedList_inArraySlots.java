@@ -6,13 +6,14 @@
   List_inArraySlots
  */
 
-public class OrderedList_inArraySlots
-    implements OrderedList {
+import java.util.ArrayList;
 
-    private ?? Java-standard ArrayList here ?? list_iAS;
+public class OrderedList_inArraySlots implements OrderedList{
+
+    private ArrayList list_iAS;
 
     public OrderedList_inArraySlots() {
-        list_iAS = new List_inArraySlots();
+        ArrayList list_iAS = new ArrayList();
     }
 
     /**
@@ -26,7 +27,13 @@ public class OrderedList_inArraySlots
       @return a string representation of this Orderedlist_iAS
      */
     public String toString() {
-        return list_iAS.toString();
+         String description = "[";
+         for(int index = 0;  list_iAS.size() > index
+            ; index++) {
+				description += list_iAS.get(index) + ", ";
+			}
+         return description + "]";
+     }
     }
 
 
@@ -36,10 +43,10 @@ public class OrderedList_inArraySlots
      */
      public boolean add( int value) {
          int dest = 0;
-         for( ; dest < list_iAS.size() && list_iAS.get( dest) < value
+         for(; dest < list_iAS.size() && (int)list_iAS.get( dest)  < value
             ; dest++) ;
-         // System.out.println( "OL adding " + value
-         //                   + " at index " + dest);
+         System.out.println( "OL adding " + value
+                           + " at index " + dest);
          list_iAS.add( dest, value);
          return true;
      }
@@ -53,7 +60,9 @@ public class OrderedList_inArraySlots
            whether the condition was violated.)
      */
     public int get( int index ) {
-        return list_iAS.get( index);
+		int get = 0; //error value
+		if (list_iAS.get(index) instanceof Integer)get = (int) list_iAS.get(index);
+		return get;
     }
 
 
@@ -66,6 +75,8 @@ public class OrderedList_inArraySlots
       @return the value that was removed from the list
      */
     public int remove( int index) {
-        return list_iAS.remove( index);
+        int remove = 0; //error value
+		if (list_iAS.get(index) instanceof Integer) remove= (int) list_iAS.get(index);
+		return remove;
     }
 }
