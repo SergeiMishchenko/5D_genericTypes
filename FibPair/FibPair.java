@@ -5,11 +5,12 @@
 public class FibPair {
     public static void main(String[] commandLine) {
         System.out.println();
-        
         // calculate next pair, Fibonacci-style
         nextText( 8, 5, "[13,8]");
         nextText( 3, 2, "[5,3]");
-        
+		// Pair p1 = new Pair <Integer,  ("String"); //unsuccessful instantiation
+		Pair p2 = new Pair (5, 5); //successful instantiation
+		
         /* optional extra education: Fibonacci numbers
            recursively, and in linear time */
         // oneFib(  0, 0);  // base case
@@ -58,7 +59,8 @@ public class FibPair {
 			bigger = (int)pair.getFirst() + (int)pair.getSecond();
 			smaller = (int)pair.getFirst();
 		}
-		return new Pair(bigger, smaller);
+		Pair nextPair = new Pair (bigger, smaller);
+		return nextPair;
     }
 
 
