@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 public class OrderedList_inArraySlots implements OrderedList{
 
-    private ArrayList list_iAS;
+    private ArrayList <Integer> list_iAS;
 
     public OrderedList_inArraySlots() {
-        ArrayList list_iAS = new ArrayList();
+        list_iAS = new ArrayList <Integer>();
     }
 
     /**
@@ -27,14 +27,15 @@ public class OrderedList_inArraySlots implements OrderedList{
       @return a string representation of this Orderedlist_iAS
      */
     public String toString() {
-         String description = "[";
-         for(int index = 0;  list_iAS.size() > index
-            ; index++) {
-				description += list_iAS.get(index) + ", ";
-			}
-         return description + "]";
+         // String description = "[";
+         // for(int index = 0;  list_iAS.size() > index
+            // ; index++) {
+				// description += list_iAS.get(index) + ", ";
+			// }
+         // return description + "]";
+		 return list_iAS.toString();
      }
-    }
+    
 
 
     /**
@@ -48,7 +49,7 @@ public class OrderedList_inArraySlots implements OrderedList{
          System.out.println( "OL adding " + value
                            + " at index " + dest);
          list_iAS.add( dest, value);
-         return true;
+		 return true;
      }
 
 
@@ -76,7 +77,7 @@ public class OrderedList_inArraySlots implements OrderedList{
      */
     public int remove( int index) {
         int remove = 0; //error value
-		if (list_iAS.get(index) instanceof Integer) remove= (int) list_iAS.get(index);
+		if (list_iAS.get(index) instanceof Integer) remove= (int) list_iAS.remove(index);
 		return remove;
     }
 }
