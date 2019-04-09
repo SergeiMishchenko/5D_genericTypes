@@ -21,67 +21,83 @@ in [UserSavedByCompiler](https://github.com/stuyvesant-cs/solutionsHolmes/blob/2
 
 - definition that a class / type that is parameterized by a generic type, `T`:
 ```
-your exemplifying line from the Pair example here
+public class Pair<T>
 ```
-in [class](URL)
+in [Pair](https://github.com/stuyvesant-cs/skeletonsHolmes/blob/34c2e635cbaebf480a7906aa63c046c4d9253ca7/5D_genericTypes/FibPair/Pair.java#L8)
 
 
 - declaration of a variable that can hold a reference to an instance
 of such a class:
 ```
-your exemplifying line from the Pair example here
+private T first;
 ```
-in [class](URL)
+in [Pair](https://github.com/stuyvesant-cs/skeletonsHolmes/blob/34c2e635cbaebf480a7906aa63c046c4d9253ca7/5D_genericTypes/FibPair/Pair.java#L10)
 
 
 - assignment to such a variable:
 ```
-your exemplifying line from the Pair example here
+this.first =  first;
 ```
-in [class](URL)
+in [Pair](https://github.com/stuyvesant-cs/skeletonsHolmes/blob/34c2e635cbaebf480a7906aa63c046c4d9253ca7/5D_genericTypes/FibPair/Pair.java#L14)
 
 
 - declaration of a method that returns an instance of such a type:
 ```
-your exemplifying line from the Pair example here
+public T getFirst() { return first; }
 ```
-in [class](URL)
+in [Pair](https://github.com/stuyvesant-cs/skeletonsHolmes/blob/34c2e635cbaebf480a7906aa63c046c4d9253ca7/5D_genericTypes/FibPair/Pair.java#L18)
 
 
 - successful instantiation of an instance of such a class:
 ```
-your exemplifying line from the Pair example here
+Pair p2 = new Pair (5, 5); //successful instantiation
 ```
-in [class](URL)
+in [FibPair](https://github.com/SergeiMishchenko/5D_genericTypes/blob/37d17610a28e86137dde5cba4989de4048ac4966/FibPair/FibPair.java#L12)
 
 
 - *un*successful instantiation of an instance of such a class,
 caught by the compiler:
 ```
-your exemplifying line from the Pair example here
+// Pair p1 = new Pair <Integer,  ("String"); //unsuccessful instantiation
 ```
-in [class](URL)
+in [FibPair](https://github.com/SergeiMishchenko/5D_genericTypes/blob/37d17610a28e86137dde5cba4989de4048ac4966/FibPair/FibPair.java#L11)
 
 
 - a variable that can hold a reference to an instance of the generic type
 in a class / type that is parameterized by a generic type:
 ```
-your exemplifying line from the Pair example here
+		Pair nextPair = new Pair (bigger, smaller);
 ```
-in [class](URL)
+in [FibPair](https://github.com/SergeiMishchenko/5D_genericTypes/blob/00b605e2a0dadc9b27bb0ee24149e41a8d01bfab/FibPair/FibPair.java#L61)
 
 
 - the declaration of a method or constructor that accepts a parameter of a generic type:
 ```
-your exemplifying line from the Pair example here
+    private static Pair nextPairAfter(Pair pair) {
+        int bigger = 0; //for errors
+		int smaller = 0;
+		if (pair.getFirst() instanceof Integer & pair.getSecond() instanceof Integer){
+			bigger = (int)pair.getFirst() + (int)pair.getSecond();
+			smaller = (int)pair.getFirst();
+		}
+		return new Pair(bigger, smaller);
+    }
 ```
-in [class](URL)
+in [FibPair](https://github.com/SergeiMishchenko/5D_genericTypes/blob/00b605e2a0dadc9b27bb0ee24149e41a8d01bfab/FibPair/FibPair.java#L54)
 
 
 - the declaration of a method that returns a value of a generic type:
 ```
-your exemplifying line from the Pair example here
+    private static Pair nextPairAfter(Pair pair) {
+        int bigger = 0; //for errors
+		int smaller = 0;
+		if (pair.getFirst() instanceof Integer & pair.getSecond() instanceof Integer){
+			bigger = (int)pair.getFirst() + (int)pair.getSecond();
+			smaller = (int)pair.getFirst();
+		}
+		return new Pair(bigger, smaller);
+    }
 ```
-in [class](URL)
+in [FibPair](https://github.com/SergeiMishchenko/5D_genericTypes/blob/00b605e2a0dadc9b27bb0ee24149e41a8d01bfab/FibPair/FibPair.java#L54)
 
 
