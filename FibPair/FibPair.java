@@ -8,7 +8,7 @@ public class FibPair {
         // calculate next pair, Fibonacci-style
         nextText( 8, 5, "[13,8]");
         nextText( 3, 2, "[5,3]");
-		// Pair p1 = new Pair <Integer,  ("String"); //unsuccessful instantiation
+		Pair p1 = new Pair <Integer>  ("String", "string"); //unsuccessful instantiation
 		Pair p2 = new Pair (5, 5); //successful instantiation
 		
         /* optional extra education: Fibonacci numbers

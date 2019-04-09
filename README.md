@@ -58,7 +58,7 @@ Pair p2 = new Pair (5, 5); //successful instantiation
 - *un*successful instantiation of an instance of such a class,
 caught by the compiler:
 ```
-// Pair p1 = new Pair <Integer,  ("String"); //unsuccessful instantiation
+// Pair p1 = new Pair <Integer>  ("String", "string"); //unsuccessful instantiation
 ```
 # in [FibPair](https://github.com/SergeiMishchenko/5D_genericTypes/blob/37d17610a28e86137dde5cba4989de4048ac4966/FibPair/FibPair.java#L11)
 
